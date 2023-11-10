@@ -1,39 +1,45 @@
 import { useState } from 'react';
-import allExercises from './data/all-exercises.json'
-import { ExerciseTopProperty } from './types/exerciseTopProperty';
-import { QAExercise } from './types/qaExercise';
+import allExercises from './data-3/all-exercises.json'
+// import { ExerciseTopProperty } from './types/exerciseTopProperty';
+// import { QAExercise } from './types/qaExercise';
+// import QuizList from './components/quiz-list/QuizList';
+// import ExerciseGame from './components/exercise-game/ExerciseGame';
+import Exercise from './components/exercise/Exercise';
+import { TopicItemType } from './types/topicItemType';
 import QuizList from './components/quiz-list/QuizList';
-import ExerciseGame from './components/exercise-game/ExerciseGame';
-
-
-
-interface AllExercises {
-  [key: string]: QAExercise[];
-}
+import { ExerciseType } from './types/exerciseType';
 
 export default function App() {
-  const [selectedQuiz, setSelectedQuiz] = useState<QAExercise[]>([]);
-  const exercises: AllExercises = allExercises;
-  const topProps: ExerciseTopProperty[] = Object.keys(allExercises).map((item) => {
+  const [filteredExercises, setFilteredExercises] = useState<Array<ExerciseType>>([]);
+  const topics: Array<TopicItemType> = allExercises.map((item) => { name: item.domain; nameCapitalized: item.domain.charAt(0).toUpperCase() + item.domain.slice(1); });
+  const exercises: ExerciseType[] = allExercises.map((item) => {
     return {
-      jsonProperty: item,
-      capitalizedProperty: item.charAt(0).toUpperCase() + item.slice(1)
+      domain: item.domain,
+      subDomain: item.subDomain,
+      question: item.question,
+      answers: item.answers ? item.answers.split(",") : []
     }
   });
 
-  function selectQuizHandler(jsonProperty: string) {
-    setSelectedQuiz(exercises[jsonProperty]);
+  function filterExercisesByTopic(topic: string) {
+    const filteredExercises = exercises.filter((exercise) => exercise.domain === topic);
+    setFilteredExercises(filteredExercises);
   }
 
   return (
     <>
       <QuizList
-        topProps={topProps}
-        selectQuizHandler={selectQuizHandler}
+        topProps={topics}
+        filterExercisesByTopic={filterExercisesByTopic}
       />
-      {/* Render the selected quiz */}
-      {selectedQuiz.length > 0 && <ExerciseGame data={selectedQuiz} />}
-      {/* {selectedQuiz.length > 0 && (
+      <Exercise />
+    </>
+  );
+}
+
+{/* Render the selected quiz */ }
+{/* {selectedQuiz.length > 0 && <ExerciseGame data={selectedQuiz} />} */ }
+{/* {selectedQuiz.length > 0 && (
         <>
           {selectedQuiz.map((exercise, index) => (
             <div key={index}>
@@ -43,6 +49,3 @@ export default function App() {
           ))}
         </>
       )} */}
-    </>
-  );
-}
