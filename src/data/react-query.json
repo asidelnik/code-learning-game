@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "word": "query",
+    "definition": "A request for data from a data source, using a specific syntax."
+  },
+  {
+    "id": 2,
+    "word": "mutation",
+    "definition": "A request to modify data on a data source, using a specific syntax."
+  },
+  {
+    "id": 3,
+    "word": "cache",
+    "definition": "A temporary storage location for frequently accessed data, used to improve performance."
+  },
+  {
+    "id": 4,
+    "word": "refetch",
+    "definition": "A function that allows you to manually refetch data from a data source."
+  },
+  {
+    "id": 5,
+    "word": "invalidate",
+    "definition": "A function that allows you to manually invalidate cached data, forcing a refetch on the next query."
+  },
+  {
+    "id": 6,
+    "word": "optimistic update",
+    "definition": "A technique for updating the UI optimistically, before the server has confirmed the update."
+  },
+  {
+    "id": 7,
+    "word": "pessimistic update",
+    "definition": "A technique for updating the UI pessimistically, after the server has confirmed the update."
+  },
+  {
+    "id": 8,
+    "word": "query key",
+    "definition": "A unique identifier for a query, used to cache and refetch data."
+  },
+  {
+    "id": 9,
+    "word": "mutation key",
+    "definition": "A unique identifier for a mutation, used to cache and refetch data."
+  },
+  {
+    "id": 10,
+    "word": "query client",
+    "definition": "A client-side object that manages queries and mutations, and provides access to the cache."
+  },
+  {
+    "id": 11,
+    "word": "query function",
+    "definition": "A function that returns a query result, using a specific syntax."
+  },
+  {
+    "id": 12,
+    "word": "mutation function",
+    "definition": "A function that returns a mutation result, using a specific syntax."
+  },
+  {
+    "id": 13,
+    "word": "query hook",
+    "definition": "A React hook that returns a query result, using a specific syntax."
+  },
+  {
+    "id": 14,
+    "word": "mutation hook",
+    "definition": "A React hook that returns a mutation result, using a specific syntax."
+  },
+  {
+    "id": 15,
+    "word": "useQuery",
+    "definition": "A React hook that returns a query result, using a specific syntax."
+  },
+  {
+    "id": 16,
+    "word": "useMutation",
+    "definition": "A React hook that returns a mutation result, using a specific syntax."
+  },
+  {
+    "id": 17,
+    "word": "useQueryClient",
+    "definition": "A React hook that returns the query client object."
+  },
+  {
+    "id": 18,
+    "word": "useIsFetching",
+    "definition": "A React hook that returns a boolean indicating whether any queries are currently fetching data."
+  },
+  {
+    "id": 19,
+    "word": "useIsMutating",
+    "definition": "A React hook that returns a boolean indicating whether any mutations are currently in progress."
+  },
+  {
+    "id": 20,
+    "word": "useQueryErrorResetBoundary",
+    "definition": "A React component that resets the error state of queries within its boundary."
+  }
+]

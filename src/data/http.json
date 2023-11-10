@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "word": "HTTP",
+    "definition": "A protocol for communication between a client and a server over the internet. It stands for Hypertext Transfer Protocol."
+  },
+  {
+    "id": 2,
+    "word": "Request",
+    "definition": "An HTTP message sent by a client to a server to initiate an action. It contains information about the resource being requested and the method of accessing it."
+  },
+  {
+    "id": 3,
+    "word": "Response",
+    "definition": "An HTTP message sent by a server to a client in response to a request. It contains information about the status of the request and the requested resource."
+  },
+  {
+    "id": 4,
+    "word": "Header",
+    "definition": "An HTTP message component that contains information about the message, such as the content type, encoding, and length."
+  },
+  {
+    "id": 5,
+    "word": "Body",
+    "definition": "An HTTP message component that contains the data being sent in the message, such as the content of a web page or the data being submitted in a form."
+  },
+  {
+    "id": 6,
+    "word": "GET",
+    "definition": "An HTTP method used to retrieve information from a server. It is one of the most commonly used HTTP methods."
+  },
+  {
+    "id": 7,
+    "word": "POST",
+    "definition": "An HTTP method used to submit data to a server to create or update a resource. It is commonly used for form submissions and API requests."
+  },
+  {
+    "id": 8,
+    "word": "PUT",
+    "definition": "An HTTP method used to update an existing resource on a server. It replaces the existing resource with the updated data."
+  },
+  {
+    "id": 9,
+    "word": "DELETE",
+    "definition": "An HTTP method used to delete a resource on a server."
+  },
+  {
+    "id": 10,
+    "word": "Status Code",
+    "definition": "A three-digit code returned by a server in an HTTP response that indicates the status of the request. Examples include 200 OK, 404 Not Found, and 500 Internal Server Error."
+  },
+  {
+    "id": 11,
+    "word": "Content-Type",
+    "definition": "An HTTP header that specifies the type of data being sent in the message body, such as text, HTML, or JSON."
+  },
+  {
+    "id": 12,
+    "word": "URL",
+    "definition": "A string that identifies the location of a resource on the internet. It stands for Uniform Resource Locator."
+  },
+  {
+    "id": 13,
+    "word": "Query Parameter",
+    "definition": "A key-value pair in a URL that is used to pass data to a server. It is typically used for filtering or sorting data."
+  },
+  {
+    "id": 14,
+    "word": "Response Body",
+    "definition": "The data returned by a server in an HTTP response. It is typically in the form of text, HTML, or JSON."
+  },
+  {
+    "id": 15,
+    "word": "Request Body",
+    "definition": "The data sent by a client to a server in an HTTP request. It is typically in the form of text, HTML, or JSON."
+  },
+  {
+    "id": 16,
+    "word": "Authentication",
+    "definition": "The process of verifying the identity of a user or system. It is commonly used to control access to resources on a server."
+  },
+  {
+    "id": 17,
+    "word": "Authorization",
+    "definition": "The process of granting or denying access to a resource on a server. It is typically based on the identity of the user or system making the request."
+  },
+  {
+    "id": 18,
+    "word": "Endpoint",
+    "definition": "A URL that represents a specific resource or action on a server. It is typically associated with a specific HTTP method, such as GET or POST."
+  },
+  {
+    "id": 19,
+    "word": "JSON",
+    "definition": "A lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It stands for JavaScript Object Notation."
+  },
+  {
+    "id": 20,
+    "word": "XML",
+    "definition": "A markup language used for encoding documents in a format that is both human-readable and machine-readable. It stands for Extensible Markup Language."
+  }
+]

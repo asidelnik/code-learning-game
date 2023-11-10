@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "word": "DOM",
+    "definition": "a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can interact with the page."
+  },
+  {
+    "id": 2,
+    "word": "mounting",
+    "definition": "the process of adding an element to the DOM. When a component is mounted, React creates a node in the DOM corresponding to the component and adds it to the page."
+  },
+  {
+    "id": 3,
+    "word": "Virtual DOM",
+    "definition": "a lightweight copy of the actual DOM. It is a JavaScript object that has the same properties as the real DOM, but it is much faster to manipulate. React uses the Virtual DOM to update the actual DOM efficiently."
+  },
+  {
+    "id": 4,
+    "word": "rendering",
+    "definition": "the process of updating the content of the DOM to reflect changes in the state of a React component. When a component is rendered, React updates the Virtual DOM, compares it to the previous version, and then updates the actual DOM with the changes."
+  },
+  {
+    "id": 5,
+    "word": "node",
+    "definition": "an object in the DOM tree. It can be an element, an attribute, or a text node."
+  },
+  {
+    "id": 6,
+    "word": "element",
+    "definition": "a type of node that represents an HTML tag. It can have attributes and child nodes."
+  },
+  {
+    "id": 7,
+    "word": "attribute",
+    "definition": "a property of an element that provides additional information about the element. Attributes are specified in the opening tag of an element."
+  },
+  {
+    "id": 8,
+    "word": "text node",
+    "definition": "a type of node that contains text. It is a child of an element node."
+  },
+  {
+    "id": 9,
+    "word": "parent node",
+    "definition": "a node that has one or more child nodes. In the DOM tree, all nodes except the root node have a parent node."
+  },
+  {
+    "id": 10,
+    "word": "child node",
+    "definition": "a node that is a direct descendant of another node. In the DOM tree, all nodes except the leaf nodes have one or more child nodes."
+  },
+  {
+    "id": 11,
+    "word": "leaf node",
+    "definition": "a node that has no child nodes. In the DOM tree, the text nodes are the leaf nodes."
+  },
+  {
+    "id": 12,
+    "word": "HTMLCollection",
+    "definition": "an array-like object that represents a collection of elements in the DOM. It is returned by methods such as getElementsByTagName() and getElementsByClassName()."
+  },
+  {
+    "id": 13,
+    "word": "NodeList",
+    "definition": "an array-like object that represents a list of nodes in the DOM. It is returned by methods such as querySelectorAll()."
+  },
+  {
+    "id": 14,
+    "word": "querySelector()",
+    "definition": "method returns the first element that matches a specified CSS selector in the document. If no matches are found, it returns null."
+  },
+  {
+    "id": 15,
+    "word": "querySelectorAll()",
+    "definition": "method returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors."
+  },
+  {
+    "id": 16,
+    "word": "innerHTML",
+    "definition": "property sets or returns the HTML content (inner HTML) of an element."
+  },
+  {
+    "id": 17,
+    "word": "textContent",
+    "definition": "property sets or returns the text content of the specified node, and all its descendants."
+  },
+  {
+    "id": 18,
+    "word": "classList",
+    "definition": "property returns the class name(s) of an element, as a DOMTokenList object. This property is useful to add, remove and toggle CSS classes on an element."
+  }
+]
