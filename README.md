@@ -1,4 +1,4 @@
-# Code learning game
+# Coding questionnaire
 ## What
 1. Learn what you need
 2. Write your notes in a spreadsheet
@@ -13,10 +13,10 @@
 ## Spreadsheet columns / JSON array type
 ```
 export type FilteredExceriseType = {
-  exerciseNumber: number;
   domain: string;
   subDomain: string;
   question: string;
-  answers: string[];
+  answers: string;
 };
 ```
+answers column is a string separated by commas
