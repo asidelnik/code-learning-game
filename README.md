@@ -1,4 +1,4 @@
-# Coding questionnaire
+# Coding quiz
 ## What
 1. Learn what you need
 2. Write your notes in a spreadsheet
