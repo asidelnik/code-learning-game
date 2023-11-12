@@ -13,7 +13,6 @@
 ## Spreadsheet columns / JSON array type
 ```
 export type FilteredExceriseType = {
-  exerciseNumber: number;
   domain: string;
   subDomain: string;
   question: string;
