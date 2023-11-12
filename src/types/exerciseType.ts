@@ -1,7 +1,7 @@
 export type FilteredExceriseType = {
   exerciseNumber: number;
   domain: string;
-  subDomain: string;
+  // subDomain: string;
   question: string;
   answers: string[];
 };

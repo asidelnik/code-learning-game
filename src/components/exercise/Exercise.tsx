@@ -1,7 +1,7 @@
 import c from './Exercise.module.css';
 import { ExerciseType } from '../../types/exerciseType';
 import { useState } from 'react';
-export default function Exercise({ domain, subDomain, question, answers, numberToDisplay }: ExerciseType) {
+export default function Exercise({ question, answers, numberToDisplay }: ExerciseType) {
   const [answer, setAnswer] = useState<string>('');
   const [isShowAnswer, setIsShowAnswer] = useState<boolean>(false);
 
@@ -15,7 +15,6 @@ export default function Exercise({ domain, subDomain, question, answers, numberT
 
   return (
     <>
-      {/* <p className={c.topics}>{domain}{subDomain && <>&nbsp;&gt;&nbsp;{subDomain}</>}</p> */}
       <h3 className={c.question}>{numberToDisplay} - {question}</h3>
       <textarea className={c.textArea} value={answer} onChange={textChangeHandler} rows={3} />
       <button onClick={showAnswer}>Show answer</button>
