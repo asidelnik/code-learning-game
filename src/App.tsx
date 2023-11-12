@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import data from './data/all-exercises.json';
-import Exercise from './components/exercise/Exercise';
 import { TopicItemType } from './types/topicItemType';
 import TopicsList from './components/topics-list/TopicsList';
 import { FilteredExceriseType } from './types/exerciseType';
+import ExerciseList from './components/exercise-list/ExerciseList';
 
 export default function App() {
   const topicList: TopicItemType[] = data
@@ -46,21 +46,25 @@ export default function App() {
   return (
     <>
       <header>
-        <button onClick={() => setIsShowFilters(!isShowFilters)}>Filter</button>&nbsp;&nbsp;
+        <button onClick={() => setIsShowFilters(!isShowFilters)}>Filter</button>&nbsp;&nbsp;&nbsp;
         <button onClick={randomizeExercises}>Randomize</button>
       </header>
+
       {isShowFilters && (
         <TopicsList
           topics={topicList}
           filterExercisesByTopic={filterExercisesByTopic}
         />
       )}
-      {exercisesFilteredByTopic.length > 0 && exercisesFilteredByTopic.map((exercise: FilteredExceriseType, index: number) => (
-      // index === exercise.exerciseNumber - 1 &&
-        <div key={exercise.exerciseNumber} className='exercise-container'>
-            <Exercise {...exercise} numberToDisplay={index + 1} />
-        </div>
-      ))}
+      <ExerciseList exercisesFilteredByTopic={exercisesFilteredByTopic} />
+      {/* <div>
+        {exercisesFilteredByTopic.length > 0 && exercisesFilteredByTopic.map((exercise: FilteredExceriseType, index: number) => (
+        // index === exercise.exerciseNumber - 1 &&
+          <div key={exercise.exerciseNumber} className='exercise-container'>
+              <Exercise {...exercise} numberToDisplay={index + 1} />
+          </div>
+        ))}
+      </div> */}
     </>
   );
 }

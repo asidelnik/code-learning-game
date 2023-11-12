@@ -1,5 +1,6 @@
-import { TopicsListProps } from '../../props/topicsListProps';
 import c from './TopicsList.module.css';
+import { TopicsListProps } from '../../props/topicsListProps';
+
 export default function TopicsList({ topics, filterExercisesByTopic }: TopicsListProps) {
   return (
     <>
