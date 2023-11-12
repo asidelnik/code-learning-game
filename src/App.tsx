@@ -31,10 +31,10 @@ export default function App() {
 
   const [filteredExercises, setFilteredExercises] = useState<Array<FilteredExceriseType>>(exercises);
   const [isShowFilters, setIsShowFilters] = useState<boolean>(false);
-  const [showExerciseNumber, setShowExerciseNumber] = useState<number>(1);
+  // const [showExerciseNumber, setShowExerciseNumber] = useState<number>(1);
 
   function filterExercisesByTopic(topic: string) {
-    const filteredExercises = exercises
+    const filteredExercisesByTopic = [...exercises]
       .filter((exercise) => exercise.domain === topic)
       .map((exercise, index) => {
         return {
@@ -43,7 +43,7 @@ export default function App() {
         }
       });
     setIsShowFilters(!isShowFilters);
-    setFilteredExercises(filteredExercises);
+    setFilteredExercises(filteredExercisesByTopic);
   }
 
   function randomizeExercises() {
@@ -66,13 +66,13 @@ export default function App() {
       {filteredExercises.length > 0 && filteredExercises.map((exercise: FilteredExceriseType, index: number) => (
         index === exercise.exerciseNumber - 1 &&
         <div key={exercise.exerciseNumber} className='exercise-container'>
-          <Exercise {...exercise} numberToDisplay={index + 1} nextExercise={() => setShowExerciseNumber(showExerciseNumber + 1)} />
+            <Exercise {...exercise} numberToDisplay={index + 1} />
         </div>
       ))}
     </>
   );
 }
 
-
+// numberToDisplay={index + 1} nextExercise={() => setShowExerciseNumber(showExerciseNumber + 1)}
 //   typeof item === 'object' &&
 //   item !== null &&
