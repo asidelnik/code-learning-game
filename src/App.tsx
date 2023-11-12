@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import data from './data-3/all-exercises.json';
+import data from './data/all-exercises.json';
 import Exercise from './components/exercise/Exercise';
 import { TopicItemType } from './types/topicItemType';
 import TopicsList from './components/topics-list/TopicsList';
