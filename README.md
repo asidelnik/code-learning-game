@@ -16,6 +16,7 @@ export type FilteredExceriseType = {
   domain: string;
   subDomain: string;
   question: string;
-  answers: string[];
+  answers: string;
 };
 ```
+answers column is a string separated by commas
