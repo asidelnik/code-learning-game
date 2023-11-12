@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import originalExercises from './data-3/all-exercises.json';
+import data from './data-3/all-exercises.json';
 import Exercise from './components/exercise/Exercise';
 import { TopicItemType } from './types/topicItemType';
 import TopicsList from './components/topics-list/TopicsList';
 import { FilteredExceriseType } from './types/exerciseType';
 
 export default function App() {
-  const topicList: TopicItemType[] = originalExercises
+  const topicList: TopicItemType[] = data
     .filter((item) => typeof item.domain === 'string' && item.domain.trim() !== '')
     .filter((item, index, array) => array.findIndex(t => (t.domain === item.domain)) === index)
     .map((item) => {
@@ -16,8 +16,7 @@ export default function App() {
       }
     });
 
-  // type xxx = { domain: string; subDomain: string; question: string; answers: string; } | { domain: string; subDomain?: undefined; question?: undefined; answers?: undefined; };
-  const exercises: FilteredExceriseType[] = originalExercises
+  const originalExercises: FilteredExceriseType[] = data
     .filter((item) => typeof item.domain === 'string' && item.domain.trim() !== '' && typeof item.question === 'string' && item.question.trim() !== '')
     .map((item, index: number) => {
       return {
@@ -29,26 +28,19 @@ export default function App() {
       }
     })
 
-  const [filteredExercises, setFilteredExercises] = useState<Array<FilteredExceriseType>>(exercises);
+  const [exercisesFilteredByTopic, setExercisesFilteredByTopic] = useState<Array<FilteredExceriseType>>(originalExercises);
   const [isShowFilters, setIsShowFilters] = useState<boolean>(false);
   // const [showExerciseNumber, setShowExerciseNumber] = useState<number>(1);
 
   function filterExercisesByTopic(topic: string) {
-    const filteredExercisesByTopic = [...exercises]
-      .filter((exercise) => exercise.domain === topic)
-      .map((exercise, index) => {
-        return {
-          ...exercise,
-          excersizeNumber: index + 1
-        }
-      });
+    const filteredExercisesByTopic = [...originalExercises].filter((exercise) => exercise.domain === topic);
     setIsShowFilters(!isShowFilters);
-    setFilteredExercises(filteredExercisesByTopic);
+    setExercisesFilteredByTopic(filteredExercisesByTopic);
   }
 
   function randomizeExercises() {
-    const randomizedExercises = [...filteredExercises].sort(() => Math.random() - 0.5);
-    setFilteredExercises(randomizedExercises);
+    const randomizedExercises = [...exercisesFilteredByTopic].sort(() => Math.random() - 0.5);
+    setExercisesFilteredByTopic(randomizedExercises);
   }
 
   return (
@@ -63,8 +55,8 @@ export default function App() {
           filterExercisesByTopic={filterExercisesByTopic}
         />
       )}
-      {filteredExercises.length > 0 && filteredExercises.map((exercise: FilteredExceriseType, index: number) => (
-        index === exercise.exerciseNumber - 1 &&
+      {exercisesFilteredByTopic.length > 0 && exercisesFilteredByTopic.map((exercise: FilteredExceriseType, index: number) => (
+      // index === exercise.exerciseNumber - 1 &&
         <div key={exercise.exerciseNumber} className='exercise-container'>
             <Exercise {...exercise} numberToDisplay={index + 1} />
         </div>
@@ -74,5 +66,3 @@ export default function App() {
 }
 
 // numberToDisplay={index + 1} nextExercise={() => setShowExerciseNumber(showExerciseNumber + 1)}
-//   typeof item === 'object' &&
-//   item !== null &&

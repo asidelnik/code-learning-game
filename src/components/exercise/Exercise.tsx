@@ -17,7 +17,7 @@ export default function Exercise({ domain, subDomain, question, answers, numberT
     <>
       <p className={c.topics}>{domain}{subDomain && <>&nbsp;&gt;&nbsp;{subDomain}</>}</p>
       <h3 className={c.question}>{numberToDisplay} - {question}</h3>
-      <textarea className={c.textArea} id="1" value={answer} onChange={textChangeHandler} rows={3} />
+      <textarea className={c.textArea} value={answer} onChange={textChangeHandler} rows={3} />
       <button onClick={showAnswer}>Show answer</button>
 
       {
