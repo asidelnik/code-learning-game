@@ -1,7 +1,7 @@
 import c from './Exercise.module.css';
 import { ExerciseType } from '../../types/exerciseType';
 import { useState } from 'react';
-export default function Exercise({ domain, subDomain, question, answers, numberToDisplay, nextExercise }: ExerciseType) {
+export default function Exercise({ domain, subDomain, question, answers, numberToDisplay }: ExerciseType) {
   const [answer, setAnswer] = useState<string>('');
   const [isShowAnswer, setIsShowAnswer] = useState<boolean>(false);
 

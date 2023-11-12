@@ -8,5 +8,5 @@ export type FilteredExceriseType = {
 
 export type ExerciseType = FilteredExceriseType & {
   numberToDisplay: number;
-  nextExercise: () => void;
+  // nextExercise: () => void;
 };
