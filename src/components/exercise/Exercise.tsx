@@ -1,36 +1,35 @@
-import c from './Exercise.module.scss';
+import c from './Exercise.module.css';
 import { ExerciseType } from '../../types/exerciseType';
 import { useState } from 'react';
-export default function Exercise({ domain, subDomain, question, answers }: ExerciseType) {
+export default function Exercise({ domain, subDomain, question, answers, numberToDisplay, nextExercise }: ExerciseType) {
   const [answer, setAnswer] = useState<string>('');
-  const [isAnswerSubmitted, setIsAnswerSubmitted] = useState<boolean>(false);
+  const [isShowAnswer, setIsShowAnswer] = useState<boolean>(false);
 
   function textChangeHandler(event: React.ChangeEvent<HTMLTextAreaElement>) {
     setAnswer(event.target.value);
   }
 
-  function submitAnswer() {
-    setIsAnswerSubmitted(true);
+  function showAnswer() {
+    setIsShowAnswer(!isShowAnswer);
   }
 
   return (
     <>
-      <p>{domain}&gt;{subDomain}</p>
-      <h3>{question}</h3>
-      {/* <label htmlFor="1">{answer.answer}</label> */}
-      <textarea id="1" value={answer} onChange={textChangeHandler} rows={3}>
-        {answers.length} answer/s
-      </textarea>
-      <button onClick={submitAnswer}>Submit Answer</button>
+      <p className={c.topics}>{domain}{subDomain && <>&nbsp;&gt;&nbsp;{subDomain}</>}</p>
+      <h3 className={c.question}>{numberToDisplay} - {question}</h3>
+      <textarea className={c.textArea} id="1" value={answer} onChange={textChangeHandler} rows={3} />
+      <button onClick={showAnswer}>Show answer</button>
 
-      {isAnswerSubmitted && (
+      {
+        isShowAnswer && (
         <>
-          <h3>Answers</h3>
-          <ul>
+            <h3 className={c.answerTitle}>Answers</h3>
+            <ul className={c.answerList}>
             {answers.map((answer: string, index: number) => <li key={index}>{answer}</li>)}
           </ul>
         </>
       )}
+      {/* {isShowAnswer && <button onClick={nextExercise}>Next</button>} */}
     </>
   )
 }

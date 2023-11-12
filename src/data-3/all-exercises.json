@@ -180,9 +180,6 @@
     "answers": "\"wildcard type (unknown factor), tells compiler to treat variable as if written in plain JS, opts out of type checking during compilation, can be set any value, allows any properties or methods access without compiler errors, used with existing JS code or packages"
   },
   {
-    "domain": "\""
-  },
-  {
     "domain": "typescript",
     "subDomain": "types",
     "question": "unknown vs any",
@@ -342,10 +339,7 @@
     "domain": "typescript",
     "subDomain": "typing",
     "question": "index signature - example",
-    "answers": "\"[index: string]: string;"
-  },
-  {
-    "domain": "dictionary[\"\"hello\"\"] = \"\"world\"\";\""
+    "answers": "\"[index: string]: string; dictionary[\"\"hello\"\"] = \"\"world\"\";\""
   },
   {
     "domain": "typescript",

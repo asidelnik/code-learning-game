@@ -1,0 +1,578 @@
+export const originalExercises = [
+  {
+    domain: 'typescript',
+    subDomain: 'typescript',
+    question: 'describe typescript',
+    answers: 'a typing layer above js',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'basic data types',
+    answers:
+      'string, number, boolean, array, tuple, enum, any, void, null, undefined, never, object',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'what is an interface',
+    answers:
+      'describe the Shape of a js object, only an object with those properties can be classed that interface',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'what type operator does typescript recommend',
+    answers: 'interface',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'advantages of interface',
+    answers: 'open to extension, new fields can be added after declaration',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'advantages of type',
+    answers: 'allow union & tuple usage',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'interface vs type',
+    answers:
+      'a type cannot be re-opened to add new properties, an interface can since it is always extendable',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'typescript advantages',
+    answers: 'editor checks & errors, autocomplete,',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'typescript disadvantages',
+    answers: '',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'static typing',
+    answers:
+      'types known at compile time, checking catches many errors before run',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'dynamic typing',
+    answers: 'types of variables and expressions are determined at runtime.',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'call signature',
+    answers: 'function typing - params & return types',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'call signature other names',
+    answers: 'function type, type signature',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'call signature function representation',
+    answers: 'arrow function',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'type annotation - what',
+    answers: 'explicit type setting to variables, functions, and classes',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'compile',
+    question: 'what is the name of the typescript compiler',
+    answers: 'tsc',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'compile',
+    question: 'what can the tsc do',
+    answers: 'transpile ts to js',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'compile',
+    question: 'which causes transpilation',
+    answers: 'build',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'compile',
+    question: 'what is a cli',
+    answers: 'command line interface, text based interface',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'shape',
+    answers: 'fields & values of js object',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'ways to describe shapes',
+    answers: 'interface, type',
+  },
+  {
+    domain: 'javascript',
+    subDomain: '',
+    question: 'what does the @ mean in js',
+    answers: 'decorator',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'what are template strings',
+    answers:
+      'Strings surrounded by backtick/backquote(`), can span multiple lines, can have embedded expressions, embedding form ${ expr }',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: '2 ways of declaring typed array',
+    answers: 'string[], Array<string>',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'what is a tuple',
+    answers:
+      'an array with a fixed number of elements, known types, types can be different, initialization values order matter',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'when is a tuple best used',
+    answers: 'fixed array length, elements types known',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'enum advantage',
+    answers:
+      'understandable naming to numeric values, retrieve name of numeric value',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'unknown type',
+    answers:
+      'unknown variable at application code writing time, can take any value type, can be set to other variables after type checking',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'unknown checks',
+    answers: 'typeof checks, comparison checks',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'any',
+    answers:
+      '"wildcard type (unknown factor), tells compiler to treat variable as if written in plain JS, opts out of type checking during compilation, can be set any value, allows any properties or methods access without compiler errors, used with existing JS code or packages',
+  },
+  {
+    domain: '"',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'types',
+    question: 'unknown vs any',
+    answers:
+      'unknow is type safe & can type check while any is not, unknown is used when not knowing what data will be received while any when using js package',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'void',
+    answers: 'return type of functions that do not return a value',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'what types are subtypes of all other types',
+    answers: 'null, undefined',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'Can null & undefined by assigned to other types',
+    answers: 'yes',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'what is a type guard',
+    answers:
+      'expressions that perform a check that guarantees the type in a scope, a function that returns a boolean and includes a type predicate (arg is Type)',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'types of type guard',
+    answers: 'typeof, instanceof, in operator, user defined',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'as keyword - what',
+    answers:
+      'used for type assertions, tell the TypeScript compiler about the specific type of a generic object',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'as - example',
+    answers: 'obj as interfaceName',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'as - why',
+    answers: 'to allow usage of type properties',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'is keyword - what',
+    answers: 'defines a type guard',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'is - example',
+    answers: 'returnValue is string',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: '',
+    answers: '',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'type predicate - what',
+    answers:
+      'function return type, turns a boolean return value to [variable] is [string] ',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'type predicate - example',
+    answers: 'returnValue is string',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'type narrowing',
+    answers:
+      'process of refining the type of a variable based on certain checks or conditions',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'type narrowing - example',
+    answers: 'using a variable in an if block after figuring out its type',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'variable',
+    question: 'var',
+    answers:
+      'scoped to nearest function block, when used in global scope creates a new property, hoisted to top, initialized with undefined',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'variable',
+    question: 'let',
+    answers:
+      'scoped to nearest enclosing block, hoisted to top, not initialized',
+  },
+  {
+    domain: 'typescript',
+    subDomain: '',
+    question: 'object type - what',
+    answers:
+      'object used as a type, used to define a function param, has keys & types',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'type comination',
+    question: 'intersection - what',
+    answers: 'a way to combine multiple types into one',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'type comination',
+    question: 'intersection - example',
+    answers: 'type Combined = First & Second',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'type comination',
+    question: 'type alias - what',
+    answers: 'can name any type or combination of types into a new type',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'type comination',
+    question: 'type alias - example',
+    answers: 'type StringOrNumber = string | number;',
+  },
+  {
+    domain: 'react',
+    subDomain: 'typescript',
+    question: 'Generic components',
+    answers: 'a react component that takes generic props',
+  },
+  {
+    domain: 'react',
+    subDomain: 'typescript',
+    question: 'typescript usage scenarios in web development',
+    answers:
+      'fetch typed data from server, fetch typed or unknown data, passing typed data into node packaged components, passing typed props into my components, using enums for more understandble code, generic components',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'index signature',
+    answers:
+      'used to describe types that can be indexed by a number or a string',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'index signature - example',
+    answers: '"[index: string]: string;',
+  },
+  {
+    domain: 'dictionary[""hello""] = ""world"";"',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'namespaces',
+    answers: '',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'modules',
+    answers: '',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'module - what',
+    answers:
+      'a file that exports js code, exported variables & functions, imported in ohter files',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'module - why',
+    answers:
+      'module exports are reusable, code separated to files is more organized, integral in building scalable applications',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'how to use js code from 1 file in another',
+    answers: 'export, import',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'module specifier',
+    answers: 'module path string in import statements',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'named export',
+    answers: 'useful with multiple exports from a single file',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'default export',
+    answers: 'useful with single export from a file',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'method to prevent import naming conflicts',
+    answers: 'renaming imports with keyword as',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'module object - what',
+    answers: 'creates a namespace for all imports from a module',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'module object - why',
+    answers:
+      'solves naming conflicts with modules that have similar exported names',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'module object - how',
+    answers: 'import * as something from...',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'run-time',
+    question: 'javascript runtime - what',
+    answers: 'an environment where JavaScript code is executed',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'run-time',
+    question: 'javascript runtime - examples',
+    answers: 'broswers, Node.JS',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'script vs module',
+    answers:
+      'js files without import, export or top-level await are scripts, others are modules',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'type importing - how',
+    answers: 'import type {cat, dog} from ...',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'type importing - what',
+    answers: 'import statement that can only import types',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'in which format are most npm modules delivered in',
+    answers: 'CommonJS',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'CommonJS alternatives',
+    answers: 'ES Modules, AMD, ES6',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'module system',
+    answers:
+      'a way to organize and structure code, allow developers to split their code into reusable pieces, each encapsulating specific functionality',
+  },
+  {
+    domain: 'typescript',
+    subDomain: 'typing',
+    question: 'typescript namespace',
+    answers:
+      'a way to group related code under a single umbrella, helps to avoid naming collisions, helps with organizing code bases',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'module',
+    question: 'ES Modules',
+    answers:
+      'standard module system in modern JavaScript, allows exporting code from a module file and importing it in other files',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'event loop - what',
+    answers: 'model which the JS runtime model is based on',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'event loop - do',
+    answers:
+      'executes the code, collect & process events, execute queue sub-tasks',
+  },
+  {
+    domain: 'CS',
+    subDomain: 'data structure',
+    question: 'stack - what',
+    answers:
+      'collection of elements, last in first out, push and pop operations',
+  },
+  {
+    domain: 'CS',
+    subDomain: 'data structure',
+    question: 'queue - what',
+    answers:
+      'collection of elements, first in first out, operations: enqueue & dequeue',
+  },
+  {
+    domain: 'CS',
+    subDomain: 'data structure',
+    question: 'heap - what',
+    answers: 'tree based data structure',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'what do function calls form',
+    answers: 'the call stack, a stack of frames',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'where is the call stack created',
+    answers: 'in the event loop',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'what is alocated in the heap',
+    answers: 'objects',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'what is the heap',
+    answers: 'a large region of memory, tree',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'message queue - what',
+    answers: 'a list of messages (with functions) to be processed',
+  },
+  {
+    domain: 'javascript',
+    subDomain: 'event loop',
+    question: 'message queue - process',
+    answers:
+      'queue message are removed, when removed their function is called and added as a frame to the call stack, when the stack is empty, the next queue message will be processed',
+  },
+];

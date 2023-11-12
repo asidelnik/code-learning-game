@@ -17,6 +17,64 @@
   box-sizing: inherit;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  place-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  max-width: 500px;
+  padding: 10px 15px
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10px 0;
+}
+
+.exercise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 10px;
+  border-block-end: 1px solid hsla(0, 0%, 0%, 0.4);
+  padding-block: 15px 20px;
+  /* background-color: #fff; */
+  /* width: 100%; */
+  /* max-width: 500px; */
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+}
+
+button {
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: hsl(0, 0%, 30%);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: hsl(0, 0%, 20%);
+}
+
+p {
+  margin: 0;
+}
+
+
 /* 
 a {
   font-weight: 500;
